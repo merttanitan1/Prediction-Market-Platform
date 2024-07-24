@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
-  return (
+import WalletConnect from "./components/WalletConnect";
+import CreatePrediction from "./components/CreatePrediction";
+
+const App = () => {
+  const [walletAddress, setWalletAddress] = useState("");
+  const betAddress = "0xEf484E8055C2892801C06aCAfef5Fe3580E09147";
+
+  return(
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <WalletConnect setWalletAddress={setWalletAddress}/>
+        {walletAddress && <p>Wallet Address: {walletAddress}</p>}
+        {walletAddress && <CreatePrediction betAddress={betAddress}/>}
       </header>
     </div>
   );
-}
-
+};
 export default App;
