@@ -44,7 +44,7 @@ const ClaimReward = ({betAddress}) => {
                     />
                 </div>
                 <button type="submit" disabled={loading}>
-                {loading ? "Claiming..." : "Claim Reward"}
+                    {loading ? "Claiming..." : "Claim Reward"}
                 </button>
             </form>
             {message && <p>{message}</p>}
