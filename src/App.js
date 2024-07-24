@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import WalletConnect from "./components/WalletConnect";
 import CreatePrediction from "./components/CreatePrediction";
+import BetPrediction from "./components/BetPrediction";
 
 const App = () => {
   const [walletAddress, setWalletAddress] = useState("");
@@ -13,6 +14,7 @@ const App = () => {
         <WalletConnect setWalletAddress={setWalletAddress}/>
         {walletAddress && <p>Wallet Address: {walletAddress}</p>}
         {walletAddress && <CreatePrediction betAddress={betAddress}/>}
+        {walletAddress && <BetPrediction betAddress={betAddress}/>}
       </header>
     </div>
   );
