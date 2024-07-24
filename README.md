@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Prediction Market Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Prediction Market Platform is a decentralized platform where users can make predictions about future events and bet on those predictions. The platform runs on the Ethereum blockchain and operates securely and transparently using smart contracts.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User-friendly interface
+- MetaMask integration
+- Creating and placing bets
+- Get event results using chainlink oracles
+- Automatic prize distribution
+- Decentralized and secure infrastructure
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js
+- NPM (Node Package Manager)
+- MetaMask (Browser add-on)
+- Solidity (for smart contract development)
+- Ethereum testnet (Sepolia)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Kurulum
 
-### `npm test`
+1. **Clone:**
+   ```bash
+   git clone https://github.com/username/prediction-market-platform.git
+   cd prediction-market-platform
+   bash```
+2. **Install the required packages:**
+   ```bash
+   npm install
+3. **Build and deploy smart contracts:**
+  - Use Remix Ethereum IDE to deploy Bet.sol Smart Contract.
+4. **Start Server:**
+  ```bash
+    npm start
+```
+## Usage
+1. Login with MetaMask:
+   - Connect your Ethereum wallet using the MetaMask plugin in your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Create Predict:
+   - Create a new predict on the platform and indicate when the event will conclude.
 
-### `npm run build`
+3. Bet Deposit:
+   - Join other users' predictions or bet on your own.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Wait for Results
+   - Wait for the event to happen and receive the results through Chainlink oracles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Claim Your Rewards:
+   - Get your rewards automatically if you made correct predictions.
+  
+## Contribution
+**To contribute:**
+  - Fork this git
+  - Create your own branch (git checkout -b feature/your-feature)
+  - Commit your changes (git commit -m 'Add some feature')
+  - Push to your branch (git push origin feature/your-feature)
+  - Create a Pull Request
