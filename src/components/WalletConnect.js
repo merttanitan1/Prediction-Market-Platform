@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { ethers } from "ethers";
+import MetaMask from '../images/MetaMask.svg'; 
 
 const WalletConnect = ({ setWalletAddress }) => {
     const [message, setMessage] = useState("");
 
     const connectWallet = async () => {
         if(!window.ethereum){
-            alert("Install Metamask");
-            setMessage("Install Metamask");
+            // alert("Install Metamask");
+            setMessage(`<a href='https://metamask.io/download/' target='_blank'>Install Metamask<br/><img src='${MetaMask}' alt='MetaMask' /></a>`);
             return;
         }try{
             const provider = new ethers.BrowserProvider(window.ethereum);
@@ -22,9 +23,9 @@ const WalletConnect = ({ setWalletAddress }) => {
     };
     return(
         <div>
-            <button onClick={connectWallet}>Connect Wallet</button>
-            {message && <p>{message}</p>}
-        </div>
+            <button className="connect-button" onClick={connectWallet}>Connect Wallet</button>
+            {message && <p className="connect-message" dangerouslySetInnerHTML={{ __html: message }} />}
+            </div>
     );
 };
 export default WalletConnect;
