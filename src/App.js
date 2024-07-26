@@ -21,10 +21,16 @@ const App = () => {
               <p>Wallet Address</p>
               <p>{walletAddress}</p>
             </div>
-            <CreatePrediction betAddress={betAddress} />
-            <BetPrediction betAddress={betAddress} />
-            <ResolvePrediction betAddress={betAddress} />
-            <ClaimReward betAddress={betAddress} />
+            <div className="Predictions">
+              <div>
+                <CreatePrediction betAddress={betAddress} />
+                <BetPrediction betAddress={betAddress} />
+              </div>
+              <div>
+                <ResolvePrediction betAddress={betAddress} />
+                <ClaimReward betAddress={betAddress} />
+              </div>
+            </div>
           </div>
         )}
       </main>
