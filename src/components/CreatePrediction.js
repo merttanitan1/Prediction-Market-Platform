@@ -57,7 +57,7 @@ const CreatePrediction = ({betAddress}) => {
                     {loading ? "Creating..." : "Create Prediction"}
                 </button>
             </form>
-            {message && <p>{message}</p>}
+            {message && <p className="message-popup warning">{message}</p>}
         </div>
     );
 };

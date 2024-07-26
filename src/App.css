@@ -8,12 +8,39 @@
 :root {
   --primary-color: #baf266;
   --secondary-color: #daf280;
-  --bg-color: #f0f0f0;
+  --bg-color: #baf2669f;
 }
+
 body {
+  background: radial-gradient(circle at 544px 625px, #0ba50b -110px, transparent 441px), radial-gradient(circle at 1205px 1255px, #0ba50b -110px, transparent 411px),
+  radial-gradient(circle at 135px 525px, #0bad0b -20px, transparent 331px), radial-gradient(circle at 915px 165px, #0bad0b -170px, transparent 361px),
+  radial-gradient(circle at 2285px 1915px, #0ba50b 90px, transparent 551px), radial-gradient(circle at 1475px 725px, #0ba50b 30px, transparent 341px),
+  radial-gradient(circle at 85px 1675px, #0bad0b -50px, transparent 551px), radial-gradient(circle at 2295px 25px, #0bad0b 130px, transparent 881px);  background-repeat: no-repeat;
+  background-color: var(--c1);
+  background-size: 100% 100%;
+  /* animation: background 150s infinite reverse; */
+}
+/* @keyframes background {
+  from {
+    background: radial-gradient(circle at 44px 425px, #0ba50b 90px, transparent 441px), radial-gradient(circle at 1005px 955px, #0ba50b 90px, transparent 311px),
+      radial-gradient(circle at 435px 825px, #0bad0b -20px, transparent 231px), radial-gradient(circle at 1215px 165px, #0bad0b 30px, transparent 161px),
+      radial-gradient(circle at 1755px 1735px, #0ba50b 90px, transparent 441px), radial-gradient(circle at 1475px 725px, #0ba50b 30px, transparent 341px),
+      radial-gradient(circle at 365px 1395px, #0bad0b 90px, transparent 271px), radial-gradient(circle at 2055px 535px, #0bad0b 250px, transparent 711px);
+  }
+  to {
+    background: radial-gradient(circle at 544px 625px, #0ba50b -110px, transparent 441px), radial-gradient(circle at 1205px 1255px, #0ba50b -110px, transparent 411px),
+      radial-gradient(circle at 135px 525px, #0bad0b -20px, transparent 331px), radial-gradient(circle at 915px 165px, #0bad0b -170px, transparent 361px),
+      radial-gradient(circle at 2285px 1915px, #0ba50b 90px, transparent 551px), radial-gradient(circle at 1475px 725px, #0ba50b 30px, transparent 341px),
+      radial-gradient(circle at 85px 1675px, #0bad0b -50px, transparent 551px), radial-gradient(circle at 2295px 25px, #0bad0b 130px, transparent 881px);
+  }
+} */
+.App {
   background-color: var(--bg-color);
   color: #242424;
+  accent-color: #589300;
+  backdrop-filter: blur(10px);
 }
+
 main {
   width: 100%;
   min-height: 100vh;
@@ -47,8 +74,42 @@ input {
   border-radius: 5px;
 }
 
-h2{
+h2 {
   margin-bottom: 10px;
+}
+
+.message-popup {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  max-width: 800px;
+  padding: 20px;
+  word-wrap: break-word;
+  animation: popup 0.5s both;
+}
+.message-popup::before {
+  content: "X";
+  top: 20px;
+  right: 30px;
+  position: relative;
+}
+.message-popup.warning {
+  color: red;
+  border: red 3px solid;
+  background-color: #ffb9b9;
+}
+.message-popup.subject {
+  color: #639b0d;
+  border: greenyellow 3px solid;
+  background-color: #daffa2;
+}
+@keyframes popup {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 50px;
+  }
 }
 
 .connect-container {
