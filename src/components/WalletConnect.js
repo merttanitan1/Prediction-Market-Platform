@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { ethers } from "ethers";
 import MetaMask from "../images/MetaMask.svg";
+import { useMessage } from '../mesagebox/MessageContext';
 
 const WalletConnect = ({ setWalletAddress }) => {
   const [message, setMessage] = useState("");
+  const { addMessage } = useMessage();
+
 
   const connectWallet = async () => {
     if (!window.ethereum) {
       // alert("Install Metamask");
       setMessage(`<a href='https://metamask.io/download/' target='_blank'>Install Metamask<br/><img src='${MetaMask}' alt='MetaMask' /></a>`);
+      addMessage('Warning','Please download MetaMask to connect your wallet',0);
       return;
     }
     try {
@@ -19,7 +23,7 @@ const WalletConnect = ({ setWalletAddress }) => {
       setWalletAddress(address);
     } catch (err) {
       console.error("Error connecting to the wallet", err);
-      setMessage("Error connecting to the wallet");
+      addMessage('Danger','Error connecting to the wallet',10000);
     }
   };
   return (

@@ -1,0 +1,89 @@
+.message-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  max-width: 800px;
+}
+
+.message-popup {
+  position: relative;
+  padding: 20px;
+  animation: fade-in .5s forwards;
+  word-wrap: break-word;
+}
+@keyframes fade-in {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0px;
+  }
+}
+.fade-out {
+  animation: fadeout .5s forwards; 
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.close-btn {
+  top: -2px;
+  right: 9px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.message-popup.Danger {
+  color: #DC3545;
+  fill: #DC3545;
+  border: #DC3545 3px solid;
+  background-color: #ffb9b9;
+}
+.message-popup.Success {
+  color: #198754;
+  fill: #198754;
+  border: #198754 3px solid;
+  background-color: #daffa2;
+}
+.message-popup.Warning {
+  color: #FFC107;
+  fill: #FFC107;
+  border: #FFC107 3px solid;
+  background-color: #ffefc0;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: #000;
+  width: 100%;
+  animation: progress 10s linear;
+  margin: 0;
+}
+.message-popup.Danger .progress-bar{
+  background-color: #DC3545;
+}
+.message-popup.Success .progress-bar{
+  background-color: #198754;
+}
+.message-popup.Warning .progress-bar{
+  background-color: #FFC107;
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+

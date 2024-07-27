@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Bet from '../contracts/Bet.json';
 import { ethers } from 'ethers';
+import MetaMask from "../images/MetaMask.svg";
+import { useMessage } from '../mesagebox/MessageContext';
 
 const CreatePrediction = ({betAddress}) => {
+    const { addMessage } = useMessage();
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
     const [description, setDescription] = useState("");
@@ -10,8 +13,8 @@ const CreatePrediction = ({betAddress}) => {
 
     const createPrediction = async () => {
         if(!window.ethereum){
-            alert("Please Install MetaMask!");
-            setMessage("Please Install MetaMask!");
+            // alert("Please Install MetaMask!");
+            addMessage('Danger','Please download MetaMask to connect your wallet<br><a href="https://metamask.io/download/" target="_blank">Install Metamask<br/><img src="${MetaMask}" alt="MetaMask"/></a>',10000);
             return;
         }
         setLoading(true);
