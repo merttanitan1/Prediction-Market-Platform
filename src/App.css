@@ -5,24 +5,38 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --primary-color: #baf266;
-  --secondary-color: #daf280;
-  --bg-color: #baf2669f;
-}
 
 body {
-  background: radial-gradient(circle at 164px -245px, #89e989 -350px, transparent 641px), radial-gradient(circle at 735px 1255px, #89e989 -660px, transparent 361px),
-    radial-gradient(circle at 135px 525px, #a0cfa0 -570px, transparent 331px), radial-gradient(circle at 925px 165px, #89e989 -370px, transparent 361px),
-    radial-gradient(circle at 2275px 1915px, #89e989 -630px, transparent 551px), radial-gradient(circle at 1045px 2045px, #89e989 -740px, transparent 411px),
-    radial-gradient(circle at 75px 1675px, #89e989 -540px, transparent 551px), radial-gradient(circle at 2275px 25px, #89e989 -540px, transparent 881px);
-  background-repeat: no-repeat;
-  background-color: var(--c1);
-  background-size: 100% 100%;
-  background-color: var(--bg-color);
   color: #242424;
   accent-color: #589300;
-  backdrop-filter: blur(10px);
+  background-color: #f5f5f5;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    41deg,
+    #00000000 0%,
+    #00000000 10%,
+    #8bc34a 10%,
+    #8bc34a 11%,
+    #00000000 11%,
+    #00000000 13%,
+    #8bc34a 13%,
+    #8bc34a 14%,
+    #00000000 14%,
+    #00000000 16%,
+    #8bc34a 16%,
+    #8bc34a 17%,
+    #00000000 17%,
+    #00000000 19%,
+    #8bc34a 19%,
+    #8bc34a 20%,
+    #00000000 20%,
+    #00000000 21%
+  );
+
+  background-position: bottom left; /* Çizgileri sol alt köşede sabitle */
+  background-size: 100% 100%; /* Çizgilerin tekrar boyutu */
+  background-repeat: no-repeat;
 }
 
 main {
@@ -40,7 +54,7 @@ button {
   border: none;
   box-shadow: -1px 3px 0px black;
   border-radius: 9px;
-  background-color: #baf266;
+  background-color: #8bc34a;
   transition: all 0.2s;
   margin: 10px 0;
   cursor: pointer;
@@ -80,10 +94,9 @@ h2 {
 .container {
   background-color: #ffffff;
   padding: 20px;
-  border: 5px solid #baf266;
-  border-radius: 16px;
+  border: 5px solid #8bc34a;
   max-width: 100%;
-  box-shadow: -5px 9px 9px #ababab59;
+  box-shadow: -10px 10px 0 0 #a5d6a7, /* en hafif gölge */ -20px 20px 0 0 #66bb6a, /* orta gölge */ -30px 30px 0 0 #2e7d32;
 }
 
 div {
@@ -107,7 +120,7 @@ div {
 .Predictions > div > div {
   background-color: #f5f5f5;
   padding: 20px;
-  border: 5px solid #baf266;
+  border: 5px solid #8bc34a;
   border-radius: 16px;
   box-shadow: -5px 9px 9px #ababab59;
 }

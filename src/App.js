@@ -14,8 +14,9 @@ const App = () => {
   const betAddress = "0xEf484E8055C2892801C06aCAfef5Fe3580E09147";
 
   return (
-    <MessageProvider>
-      <div className="App">
+    <div className="App">
+      {/* MessageProvider Mesaj kutularının görünmesi için en dış kısımda bulunmalı */}
+      <MessageProvider> 
         <main>
           <WalletConnect setWalletAddress={setWalletAddress} />
           {walletAddress && (
@@ -38,8 +39,8 @@ const App = () => {
           )}
           <MessagePopup />
         </main>
-      </div>
-    </MessageProvider>
+      </MessageProvider>
+    </div>
   );
 };
 export default App;
