@@ -33,7 +33,7 @@ const ClaimReward = ({ betAddress }) => {
       setPredictionId("");
     } catch (err) {
     //   setMessage("Claim Reward Error." + err.message);
-      addMessage("Danger", `Claim Reward Error"${err.message}`, 0);
+      addMessage("Danger", `Claim Reward Error"${err.message}`, 10000);
       console.error(err);
     }
     setLoading(false);

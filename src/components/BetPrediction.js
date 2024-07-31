@@ -35,7 +35,7 @@ const BetPrediction = ({ betAddress }) => {
     } catch (err) {
       console.log(err);
     //   setMessage("An error occurred", err.message);
-      addMessage("Danger", `An error occurred"${err.message}`, 0);
+      addMessage("Danger", `An error occurred"${err.message}`, 10000);
     }
     setLoading(false);
   };
